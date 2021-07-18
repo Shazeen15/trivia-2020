@@ -1,0 +1,20 @@
+.correct {
+  background-color: rgba(163, 235, 163, 0.541);
+}
+
+.wrong {
+  background-color: rgba(242, 138, 138, 0.445);
+}
+
+.correct,
+.wrong {
+  color: black;
+}
+
+button {
+  font-size: 1rem;
+  margin: 3%;
+  padding: 3%;
+  border: none;
+  background-color: rgba(240, 240, 157, 0.589);
+}

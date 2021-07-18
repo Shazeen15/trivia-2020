@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Questions from "./components/Questions";
+import "./App.css";
+import triviaQuestions from "./Apprentice_TandemFor400_Data.json";
 
 function App() {
+  const [trivia] = useState(triviaQuestions);
+  // console.log(trivia);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Tandem Trivia</h1>
+      <Questions trivia={trivia} />
     </div>
   );
 }
