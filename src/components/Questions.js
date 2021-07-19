@@ -80,6 +80,7 @@ export default function Questions({
                 >
                   Next
                 </button>
+                <button onClick={retryBtn}>Restart Trivia</button>
               </div>
             </>
           )}

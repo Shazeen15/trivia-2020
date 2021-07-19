@@ -16,15 +16,7 @@ function App() {
   const [submit, setSubmit] = useState(false);
 
   const startTrivia = () => {
-    //   still need to make each question unique
     setStart(false);
-    // for (let i = 0; i < 10; i++) {
-    //   let randoQuest = Math.floor(Math.random() * 10);
-    //   tenQuest.push(trivia[randoQuest]);
-    // }
-    // i want to shufle trivia
-    // then just grap 10 question
-    // save those 10 questions in tenQuest
     let shuffledTrivia = trivia.sort(() => Math.random() - 0.5);
     setTenQuest(shuffledTrivia.slice(1, 11));
   };
