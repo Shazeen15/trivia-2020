@@ -1,6 +1,6 @@
 # Tandem Trivia
 
-This project is deployed: [Trivia](https://trivia-2021.vercel.app).
+This project is deployed: [Trivia](https://trivia-2020.vercel.app).
 
 ## Local Set Up
 
