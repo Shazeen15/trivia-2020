@@ -44,7 +44,6 @@ export default function Questions({
             </div>
           ) : (
             <>
-              <h2>Questions</h2>
               <h2 className="question">
                 {tenQuest.question} {currentQuest + 1}/ 10
               </h2>

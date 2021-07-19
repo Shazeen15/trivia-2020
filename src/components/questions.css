@@ -1,24 +1,30 @@
-.correct {
+.answer-options .correct {
   background-color: #9ec4c3;
 }
 
-.incorrect {
+.answer-options .incorrect {
   background-color: #ecaf9f;
 }
 
 .correct,
 .incorrect {
   color: black;
-  padding: 1% 3%;
+}
+
+button,
+.correct,
+.incorrect {
+  padding: 1% 2%;
+  margin: 1% 2%;
 }
 
 button {
   border: none;
   background-color: #fff4e5;
   cursor: pointer;
-  margin: 3%;
-  padding-bottom: 1%;
   border: none;
+  padding: 1% 2%;
+  margin: 1% 2%;
 }
 
 button:hover {
@@ -26,8 +32,15 @@ button:hover {
 }
 
 .answer-options {
+  width: 60%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.answer-options button {
+  background-color: #e5dfe2;
+  margin: 3%;
 }
 
 .question {
