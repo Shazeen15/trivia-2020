@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="main-container">
       <h1>Tandem Trivia</h1>
       <Questions
         startTrivia={startTrivia}

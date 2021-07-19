@@ -28,7 +28,7 @@ export default function Questions({
   }, [tenQuest, tenQuests.length]);
 
   return (
-    <div>
+    <>
       {start ? (
         <button onClick={startTrivia} className="startBtn">
           Start Trivia
@@ -86,6 +86,6 @@ export default function Questions({
           )}
         </>
       )}
-    </div>
+    </>
   );
 }
