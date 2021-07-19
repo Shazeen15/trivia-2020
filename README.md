@@ -4,15 +4,23 @@ This project is deployed: [Trivia](https://trivia-2021.vercel.app).
 
 ## Local Set Up
 
-Fork the project or go straight to cloning.
+##### Step 1
+
+Fork the project or go straight to `step 2`.
+
+##### Step 2
 
 Clone the project on your desktop with `git clone <repo url>`.
 
+##### Step 3
+
 `cd` into the preoject's directory.
 
-In the project directory, you can run:
+##### Step 4
 
-Make sure to run `yarn` or `yarn install` to download the dependencies needed for this app.
+run `yarn` or `yarn install` to download the dependencies.
+
+##### In the project directory, you can run:
 
 ### `yarn start`
 
