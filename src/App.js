@@ -20,7 +20,6 @@ function App() {
     let shuffledTrivia = trivia.sort(() => Math.random() - 0.5);
     setTenQuest(shuffledTrivia.slice(1, 11));
   };
-  console.log(tenQuest);
 
   const correctAnswer = (e) => {
     setSelectedAns(e.target.firstChild.data);
