@@ -1,33 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./questions.css";
 
-export default function Questions(props) {
-  const {
-    startTrivia,
-    handleNextBtn,
-    correctAnswer,
-    retryBtn,
-    start,
-    submit,
-    tenQuest,
-    selectedAns,
-    wrongAns,
-    btnDisabled,
-    correctAns,
-    nextBtnDisabled,
-    score,
-    currentQuest,
-    tenQuests,
-  } = props;
-
-  const shuffledAnswers =
-    tenQuests.length > 0 &&
-    [...tenQuest.incorrect, tenQuest.correct].sort(() => Math.random() - 0.5);
+export default function Questions({
+  startTrivia,
+  handleNextBtn,
+  correctAnswer,
+  retryBtn,
+  start,
+  submit,
+  tenQuest,
+  selectedAns,
+  btnDisabled,
+  correctAns,
+  nextBtnDisabled,
+  score,
+  currentQuest,
+  tenQuests,
+}) {
+  const [shuffledAnswers, setShuffledAnswers] = useState([]);
+  useEffect(() => {
+    tenQuests.length &&
+      setShuffledAnswers(
+        [...tenQuest.incorrect, tenQuest.correct].sort(
+          () => Math.random() - 0.5
+        )
+      );
+  }, [tenQuest, tenQuests.length]);
 
   return (
     <div>
       {start ? (
-        <button onClick={startTrivia}>Start Trivia</button>
+        <button onClick={startTrivia} className="startBtn">
+          Start Trivia
+        </button>
       ) : (
         <>
           {submit ? (
@@ -48,17 +53,25 @@ export default function Questions(props) {
                 {selectedAns ? selectedAns : "Please select an answer"}
               </p>
               <div className="answer-options">
-                {shuffledAnswers.map((answer) => (
-                  <button
-                    onClick={correctAnswer}
-                    disabled={btnDisabled}
-                    className={tenQuest.correct === answer ? "correct" : ""}
-                  >
-                    {answer}
-                  </button>
-                ))}
+                {shuffledAnswers.map((answer) => {
+                  let showCorrectAnswer = correctAns
+                    ? answer === tenQuest.correct
+                      ? "correct"
+                      : "incorrect"
+                    : "";
+                  return (
+                    <button
+                      className={`${showCorrectAnswer}`}
+                      key={answer}
+                      onClick={correctAnswer}
+                      disabled={btnDisabled}
+                    >
+                      {answer}
+                    </button>
+                  );
+                })}
               </div>
-              <div className="next-btn">
+              <div>
                 <button
                   type="submit"
                   className="next-btn"

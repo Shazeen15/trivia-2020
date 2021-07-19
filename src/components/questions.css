@@ -2,19 +2,30 @@
   background-color: rgba(163, 235, 163, 0.541);
 }
 
-.wrong {
+.incorrect {
   background-color: rgba(242, 138, 138, 0.445);
 }
 
 .correct,
-.wrong {
+.incorrect {
   color: black;
 }
 
+.startBtn,
+.next-btn {
+  background-color: rgba(159, 221, 250, 0.425);
+}
+
 button {
+  cursor: pointer;
   font-size: 1rem;
   margin: 3%;
   padding: 3%;
   border: none;
+  border-radius: 10px;
   background-color: rgba(240, 240, 157, 0.589);
+}
+button:hover {
+  box-shadow: 3px 3px 5px 6px rgba(255, 255, 84, 0.886);
+  border-radius: 20px;
 }
