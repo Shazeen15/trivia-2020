@@ -2,6 +2,8 @@
 
 This project is deployed: [Trivia](https://trivia-2020.vercel.app).
 
+https://user-images.githubusercontent.com/67486828/177438737-abe3ea46-a452-4474-bbae-219bedac2cea.mov
+
 ## Local Set Up
 
 ##### Step 1
